@@ -2,6 +2,7 @@ from django.conf import settings
 
 if not settings.configured:
     settings.configure(
+        ALLOWED_HOSTS=['.example.com'],
         INSTALLED_APPS=(
             'django.contrib.sites',
             'subdomains',
@@ -17,6 +18,11 @@ if not settings.configured:
             'django.middleware.common.CommonMiddleware',
             'subdomains.middleware.SubdomainURLRoutingMiddleware',
         ),
+        TEMPLATES=[
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            }
+        ]
     )
 
 
