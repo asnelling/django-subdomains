@@ -2,7 +2,7 @@ install:
 	python setup.py install
 
 lint:
-	pip install --use-mirrors flake8
+	pip install flake8
 	flake8 ./subdomains
 
 clean:
