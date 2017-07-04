@@ -12,7 +12,7 @@ def get_version():
 try:
     version = get_version()
 except ImportError:
-    sys.path.append(os.path.join(os.path.dirname(__file__, 'subdomains')))
+    sys.path.append(os.path.join(os.path.dirname(__file__), 'subdomains'))
     version = get_version()
 
 
